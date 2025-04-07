@@ -1,0 +1,82 @@
+.library {
+  width: 60px;
+  background-color: #1f1f1f;
+  color: white;
+  height: calc(100vh - 170px);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: width 0.3s ease-in-out;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.btns-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.library.expanded {
+  width: 250px;
+  align-items: flex-start;
+  padding-left: 15px;
+
+  & .btns-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+}
+
+.menu-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.icon-btn {
+  background: #222;
+  border: none;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.content {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.create-btn {
+  background: #333;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+  cursor: pointer;
+  border: none;
+}
+
+.playlist {
+  display: flex;
+  align-items: center;
+  background: #222;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.playlist span {
+  font-size: 20px;
+  margin-right: 10px;
+}

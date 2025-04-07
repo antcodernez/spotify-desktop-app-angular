@@ -1,0 +1,21 @@
+.main-view-component {
+  flex-grow: 1;
+  width: 1044px;
+  height: 100%;
+  border-radius: 10px;
+  background-color: #1f1f1f;
+  margin: 0px 10px;
+  overflow: scroll;
+  color: white;
+  transition: width 0.3s ease; /* 👈 Esto hace el cambio de tamaño suave */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.main-view-component::-webkit-scrollbar {
+  display: none; /* Safari y Chrome */
+}
+
+.main-view-component.expanded {
+  width: 850px;
+}

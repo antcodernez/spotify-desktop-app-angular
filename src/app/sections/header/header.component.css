@@ -5,7 +5,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  border: none;
+  
   & p {
     color: #ffffff;
     font-size: 20px;
@@ -16,7 +17,7 @@ header {
     display: flex;
     margin-left: 10px;
     & p i {
-      font-weight: 700;
+      font-weight: 300;
       font-size: 30px;
     }
   }

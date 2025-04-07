@@ -1,0 +1,20 @@
+<div class="library" [class.expanded]="isExpanded">
+  <div class="btns-container">
+    <button class="menu-btn" (click)="toggleLibrary()"><i class='bx bx-menu' ></i></button>
+    <button class="icon-btn"><i class='bx bx-plus'></i></button>
+    <button class="icon-btn"><i class='bx bx-right-arrow-alt' ></i></button>
+  </div>
+  <div class="content" *ngIf="isExpanded">
+    <h2>Your Library</h2>
+    <button class="create-btn">+ Create</button>
+    <ul>
+      <li class="playlist">
+        <span>🎵</span>
+        <div>
+          <p>GYM ALV</p>
+          <small>Playlist • Antonio Estrada</small>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

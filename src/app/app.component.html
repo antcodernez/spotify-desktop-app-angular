@@ -1,3 +1,5 @@
 <app-header></app-header>
-<app-middle-content></app-middle-content>
-<app-footer></app-footer>
+
+<app-middle-content [isShowPlaying]="isShowPlaying"></app-middle-content>
+
+<app-footer (togglePlaying)="onTogglePlayingChange($event)"></app-footer>

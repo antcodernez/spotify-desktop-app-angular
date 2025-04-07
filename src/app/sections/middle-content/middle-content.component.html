@@ -1,1 +1,5 @@
-<p>middle-content works!</p>
+<div class="main-container-container">
+  <app-library (isExpandedChange)="onLibraryExpandedChange($event)"></app-library>
+  <app-main-view [isLibraryExpanded]="isLibraryExpanded" [isShowPlaying]="isShowPlaying"></app-main-view>
+  <app-playing-view [isShowPlaying]="isShowPlaying"></app-playing-view>
+</div>
