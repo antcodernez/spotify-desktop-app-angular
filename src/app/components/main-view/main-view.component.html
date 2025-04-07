@@ -1,3 +1,9 @@
-<div class="main-view-component" [class.expanded]="isLibraryExpanded">
+<div
+  class="main-view-component"
+  [ngClass]="{
+    'expanded': isLibraryExpanded && isShowPlaying,
+    'isNotPlaying': !isLibraryExpanded && !isShowPlaying,
+    'expandedAndNotPlaying': isLibraryExpanded && !isShowPlaying
+  }">
   <p>main-view works!</p>
 </div>

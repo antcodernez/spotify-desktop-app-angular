@@ -19,3 +19,10 @@
 .main-view-component.expanded {
   width: 850px;
 }
+
+.main-view-component.isNotPlaying {
+  width: 1430px;
+}
+.main-view-component.expandedAndNotPlaying {
+  width: 1230px;
+}
