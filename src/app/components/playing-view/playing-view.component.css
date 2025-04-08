@@ -12,3 +12,16 @@
 .playing-view-container.isShowPlaying {
   display: flex;
 }
+
+.track-info {
+  width: 100%;
+  height: 100%;
+
+  & img {
+    width: inherit;
+  }
+}
+
+.track-text {
+  
+}

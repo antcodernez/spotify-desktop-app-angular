@@ -5,5 +5,9 @@
     'isNotPlaying': !isLibraryExpanded && !isShowPlaying,
     'expandedAndNotPlaying': isLibraryExpanded && !isShowPlaying
   }">
-  <p>main-view works!</p>
+
+  <div [ngSwitch]="currentView">
+    <app-welcome-view *ngSwitchCase="'welcome'"></app-welcome-view>
+    <div *ngSwitchDefault>Default content or component here</div>
+  </div>
 </div>

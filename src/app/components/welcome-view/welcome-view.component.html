@@ -1,0 +1,31 @@
+<div class="welcome-view">
+  <div class="section">
+    <h2>Recomendados para ti</h2>
+    <div class="slider">
+      <div class="slider-item" *ngFor="let item of recommendedForYou">
+        <img [src]="item.image" alt="{{ item.name }}" />
+        <p>{{ item.name }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Artistas sugeridos</h2>
+    <div class="slider">
+      <div class="slider-item" *ngFor="let item of suggestedArtists">
+        <img [src]="item.image" alt="{{ item.name }}" />
+        <p>{{ item.name }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Recently Played</h2>
+    <div class="slider">
+      <div class="slider-item" *ngFor="let item of recentlyPlayed">
+        <img [src]="item.image" alt="{{ item.name }}" />
+        <p>{{ item.name }}</p>
+      </div>
+    </div>
+  </div>
+</div>

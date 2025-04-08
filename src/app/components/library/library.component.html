@@ -1,18 +1,28 @@
 <div class="library" [class.expanded]="isExpanded">
   <div class="btns-container">
-    <button class="menu-btn" (click)="toggleLibrary()"><i class='bx bx-menu' ></i></button>
-    <button class="icon-btn"><i class='bx bx-plus'></i></button>
-    <button class="icon-btn"><i class='bx bx-right-arrow-alt' ></i></button>
+    <button class="menu-btn" (click)="toggleLibrary()"><i class='bx bx-menu'></i></button>
+    <button class="icon-btn"><i class='bx bx-plus' (click)="toggleForm()"></i></button>
+    <button class="icon-btn"><i class='bx bx-right-arrow-alt'></i></button>
   </div>
-  <div class="content" *ngIf="isExpanded">
+
+  <div *ngIf="isExpanded" class="content">
     <h2>Your Library</h2>
-    <button class="create-btn">+ Create</button>
+    <button class="create-btn" (click)="toggleForm()">+ Create</button>
+
+    <!-- Form to add a new playlist -->
+    <div *ngIf="showForm">
+      <input type="text" [(ngModel)]="newPlaylistName" placeholder="Playlist Name">
+      <input type="text" [(ngModel)]="newPlaylistArtist" placeholder="Artist Name">
+      <button (click)="addPlaylist()">Add Playlist</button>
+    </div>
+
+    <!-- List of playlists -->
     <ul>
-      <li class="playlist">
+      <li *ngFor="let playlist of playlists" class="playlist">
         <span>🎵</span>
         <div>
-          <p>GYM ALV</p>
-          <small>Playlist • Antonio Estrada</small>
+          <p>{{ playlist.name }}</p>
+          <small>Playlist • {{ playlist.artist }}</small>
         </div>
       </li>
     </ul>

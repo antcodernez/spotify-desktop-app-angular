@@ -5,7 +5,7 @@ import { PlayingViewComponent } from '../../components/playing-view/playing-view
 
 @Component({
   selector: 'app-middle-content',
-  standalone: true, 
+  standalone: true,
   imports: [LibraryComponent, MainViewComponent, PlayingViewComponent],
   templateUrl: './middle-content.component.html',
   styleUrl: './middle-content.component.css'
@@ -13,12 +13,6 @@ import { PlayingViewComponent } from '../../components/playing-view/playing-view
 export class MiddleContentComponent {
   isLibraryExpanded = false;
   @Input() isShowPlaying = true;
-
-  ngOnChanges(changes: SimpleChanges): void {
-    if (changes['isShowPlaying']) {
-      console.log('⚡️ MiddleContentComponent recibió:', changes['isShowPlaying'].currentValue);
-    }
-  }
 
   onLibraryExpandedChange(expanded: boolean) {
     this.isLibraryExpanded = expanded;
